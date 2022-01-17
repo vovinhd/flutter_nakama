@@ -392,6 +392,12 @@ class NakamaGrpcClient extends NakamaBaseClient {
       options: _getSessionCallOptions(session),
     );
   }
+
+  @override
+  Future callRpc({required model.Session session, required String rpcId, required String payload}) {
+    // TODO: implement callRpc
+    return _client.rpcFunc(Rpc(id: rpcId, payload: payload));
+  }
 }
 
 NakamaBaseClient getNakamaClient({

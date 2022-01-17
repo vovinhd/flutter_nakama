@@ -111,4 +111,10 @@ abstract class NakamaBaseClient {
     int? limit,
     String? userId,
   });
+
+  Future<dynamic> callRpc({
+    required model.Session session, 
+    required String rpcId,
+    required String payload,
+  });
 }

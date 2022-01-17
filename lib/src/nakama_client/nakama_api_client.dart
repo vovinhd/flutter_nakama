@@ -497,6 +497,12 @@ class NakamaRestApiClient extends NakamaBaseClient {
           .toList(),
     );
   }
+
+  @override
+  Future callRpc({required model.Session session, required String rpcId, required String payload}) {
+    // TODO: implement callRpc
+    return _api.nakamaRpcFunc(id: rpcId, body: payload, httpKey: serverKey);
+  }
 }
 
 NakamaBaseClient getNakamaClient({
