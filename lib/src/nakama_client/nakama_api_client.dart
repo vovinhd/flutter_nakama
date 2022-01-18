@@ -501,7 +501,7 @@ class NakamaRestApiClient extends NakamaBaseClient {
   @override
   Future callRpc({required model.Session session, required String rpcId, required String payload}) {
     // TODO: implement callRpc
-    return _api.nakamaRpcFunc(id: rpcId, body: payload, httpKey: serverKey);
+    return _api.nakamaRpcFunc(id: rpcId, body: payload);
   }
 }
 
