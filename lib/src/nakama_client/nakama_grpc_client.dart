@@ -66,7 +66,7 @@ class NakamaGrpcClient extends NakamaBaseClient {
     required this.ssl,
     required String serverKey,
   }) {
-    this.serverKey = 'basic ${base64Encode((serverKey + ':').codeUnits)}';
+    this.serverKey = 'Basic ${base64Encode((serverKey + ':').codeUnits)}';
 
     _channel = ClientChannel(
       host,
